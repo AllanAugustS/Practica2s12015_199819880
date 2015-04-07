@@ -1,0 +1,5 @@
+set title "Grafica de Eficiencia Quicksort"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[13:0.000000] log(x)
+ pause mouse

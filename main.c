@@ -10,11 +10,19 @@
 #define GRAFICABURBUJA 5
 #define GRAFICAARBOL 6
 #define GRAFICAQUICK 7
+#define GRAFICAQUICK2 8
+#define GRAFICABURBU 9
+#define GRAFICAAVL 10
 #define TRUE 1
 #define FALSE 0
 #define TAMANO 80
 int c;
 int lista[100];
+int tiempoquicsort;
+int elementos;
+int tiempoburbuja;
+int tiempoARBOL;
+int nnodos;
 enum {IZQUIERDO, DERECHO};
 
 /* Estructuras y tipos */
@@ -154,15 +162,76 @@ int main()
 
         printf("------------ Menu -------------\n");
         printf("0. Salir\n");
-        printf("1. cargar\n");
-        printf("2. recorrido in orden\n");
-        printf("3. ordenar lista burbuja\n");
-        printf("4. ordenar lista quicksort\n");
-        printf("5. Graficar eficiencia burbuja\n");
+        printf("1. Cargar\n");
+        printf("2. Recorrido in Orden\n");
+        printf("3. Ordenar lista Burbuja\n");
+        printf("4. Ordenar lista Quicksort\n");
+        printf("5. Graficar eficiencia Burbuja\n");
         printf("6. Graficar eficiencia Arbol\n");
-        printf("7. Graficar eficiencia quicksort\n");
+        printf("7. Graficar eficiencia Quicksort\n");
+        printf("8. Graficar 2 eficiencia Quicksort\n");
+        printf("9. Graficar 2 eficiencia Burbuja\n");
+        printf("10. Graficar 2 eficiencia Arbol\n");
         printf("------------ FIN --------------\n");
-        if(seleccion==GRAFICAQUICK){
+        if(seleccion==GRAFICAAVL){
+        FILE * archivito6;
+        archivito6 = fopen("grafica6.txt","w");
+        if (archivito6==NULL)
+        printf("no se logro crear el archivo");
+      fprintf(archivito6,"set title \"Grafica de Eficiencia Arbol AVL\"\n");
+fprintf(archivito6,"set ylabel \"Tiempo en ordenar\"\n");
+fprintf(archivito6,"set xlabel \"Cantidad elementos Ordenados\"\n");
+       fprintf(archivito6,"plot[%d:%f] log(x)\n ", nnodos,tiempoARBOL);
+
+       fprintf(archivito6,"pause mouse");
+
+
+       fclose(archivito6);
+
+        printf("Esta es mi grafica ");
+         system("gnuplot grafica6.txt");
+
+        }
+        else if(seleccion==GRAFICABURBU){
+
+        FILE * archivito5;
+        archivito5 = fopen("grafica5.txt","w");
+        if (archivito5==NULL)
+        printf("no se logro crear el archivo");
+      fprintf(archivito5,"set title \"Grafica de Eficiencia Burbuja\"\n");
+fprintf(archivito5,"set ylabel \"Tiempo en ordenar\"\n");
+fprintf(archivito5,"set xlabel \"Cantidad elementos Ordenados\"\n");
+       fprintf(archivito5,"plot[%d:%f] x*exp(2)\n ", c,tiempoburbuja);
+
+       fprintf(archivito5,"pause mouse");
+
+
+       fclose(archivito5);
+
+        printf("Esta es mi grafica ");
+         system("gnuplot grafica5.txt");
+        }
+
+        else if(seleccion==GRAFICAQUICK2){
+
+        FILE * archivito4;
+        archivito4 = fopen("grafica4.txt","w");
+        if (archivito4==NULL)
+        printf("no se logro crear el archivo");
+      fprintf(archivito4,"set title \"Grafica de Eficiencia Quicksort\"\n");
+fprintf(archivito4,"set ylabel \"Tiempo en ordenar\"\n");
+fprintf(archivito4,"set xlabel \"Cantidad elementos Ordenados\"\n");
+       fprintf(archivito4,"plot[%d:%f] log(x)\n ", c,tiempoquicsort);
+
+       fprintf(archivito4,"pause mouse");
+
+
+       fclose(archivito4);
+
+        printf("Esta es mi grafica ");
+         system("gnuplot grafica4.txt");
+        }
+        else if(seleccion==GRAFICAQUICK){
         printf("Esta es mi grafica ");
          system("gnuplot grafica3.txt");
         }
@@ -200,6 +269,9 @@ system("gnuplot grafica2.txt");
         int i;
         for(i=0; i<size;i++)
         printf("%d ", lista[i]);
+        fprintf(archivito3,"set title \"Grafica de Eficiencia Quicksort\"\n");
+fprintf(archivito3,"set ylabel \"Tiempo en ordenar\"\n");
+fprintf(archivito3,"set xlabel \"Cantidad elementos Ordenados\"\n");
         for(i=0; i<size;i++)
         fprintf(archivito3,"plot[%d:%f] log(x)\n ", lista[i],tim);
 
@@ -208,7 +280,8 @@ system("gnuplot grafica2.txt");
         fin = clock();
         printf("\nSe tardo en ordenar la lista en: %f Segundos\n",(float)(fin-inicio)/(float)CLOCKS_PER_SEC);
         fclose(archivito3);
-
+         tim=tiempoquicsort;
+         size = elementos;
         }
         else if(seleccion==BURBUJA){
         float tim;
@@ -221,7 +294,9 @@ system("gnuplot grafica2.txt");
         printf("los datos de la lista ordenada burbuja son: ");
         inicio = clock();
         ordenarburbuja(cabeza);
-
+         fprintf(archivito,"set title \"Grafica de Eficiencia Burbuja\"\n");
+fprintf(archivito,"set ylabel \"Tiempo en ordenar\"\n");
+fprintf(archivito,"set xlabel \"Cantidad elementos Ordenados\"\n");
         while(cabeza!=NULL){
         fprintf(archivito,"plot[%d:%f] x*exp(2)\n ", cabeza->dato,tim);
         printf("%d ", cabeza->dato);
@@ -233,14 +308,14 @@ system("gnuplot grafica2.txt");
         tim =(float)(fin-inicio)/(float)CLOCKS_PER_SEC;
         printf("\nSe tardo en ordenar la lista en: %f Segundos\n",(float)(fin-inicio)/(float)CLOCKS_PER_SEC);
 fclose(archivito);
-
+tim=tiempoburbuja;
         }
         else if(seleccion==RECORRIDO){
 
          printf("InOrden: \n");
          inicio = clock();
          InOrden(ArbolInt, Mostrar);
-         //printf("N nodos: %d\n", NumeroNodos(ArbolInt, &nnodos));
+         printf("N nodos: %d\n", NumeroNodos(ArbolInt, &nnodos));
 
          printf("\n");
          fin = clock();
@@ -718,7 +793,9 @@ FILE * archivito2;
         if (archivito2==NULL)
         printf("no se logro crear el archivo");
 inicio = clock();
-
+    fprintf(archivito2,"set title \"Grafica de Eficiencia Arbol AVL\"\n");
+    fprintf(archivito2,"set ylabel \"Tiempo en ordenar\"\n");
+    fprintf(archivito2,"set xlabel \"Cantidad elementos Ordenados\"\n");
    fprintf(archivito2,"plot[%d:%f] log(x)\n ",*d, tim);
 
 
@@ -728,4 +805,5 @@ inicio = clock();
 
         fclose(archivito2);
         printf("%d, ", *d);
+        tim = tiempoARBOL;
 }

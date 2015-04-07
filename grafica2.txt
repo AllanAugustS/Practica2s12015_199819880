@@ -1,355 +1,193 @@
-plot[0.000000:1] log(x)
- plot[0.000000:2] log(x)
- plot[-0.000015:4] log(x)
- plot[0.000000:5] log(x)
- plot[0.000000:15] log(x)
- plot[-0.000015:23] log(x)
- plot[-0.000013:26] log(x)
- plot[-1.948775:31] log(x)
- plot[-0.000000:45] log(x)
- plot[0.000000:54] log(x)
- plot[-1.948771:55] log(x)
- plot[0.000000:67] log(x)
- pause mouseplot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000014] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000014] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.912196] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.912192] log(x)
- plot[67:0.000000] log(x)
- pause mouseplot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000014] log(x)
- plot[31:-1.230923] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.230919] log(x)
- plot[67:0.000000] log(x)
- plot[4:0.000000] log(x)
- plot[5:-0.000015] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:0.000000] log(x)
- plot[55:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.158635] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.158631] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000014] log(x)
- plot[31:-1.476664] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.476660] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000014] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000014] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.209912] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.209908] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000014] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000014] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.238389] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.238385] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000014] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000014] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.777663] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.777659] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000014] log(x)
- plot[31:-1.225296] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.225293] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000014] log(x)
- plot[31:-1.905745] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.905741] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000014] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000014] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.666981] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.666977] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000014] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000014] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.687317] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.687314] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.651602] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.651598] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000014] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000014] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.866087] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.866084] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.411623] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.411620] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.404191] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.404187] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000014] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000014] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.741845] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.741841] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.125935] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.125931] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000014] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000014] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.442984] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.442980] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000014] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000014] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.049464] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.049460] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000014] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000014] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.721400] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.721396] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000014] log(x)
- plot[31:-1.738995] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.738991] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000014] log(x)
- plot[31:-1.543358] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.543355] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.215539] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.215535] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000014] log(x)
- plot[31:-1.801949] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.801945] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.298783] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.298779] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000014] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000014] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.445504] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.445500] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000014] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000014] log(x)
- plot[26:-0.000013] log(x)
- plot[31:-1.189705] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.189702] log(x)
- plot[67:0.000000] log(x)
- plot[1:0.000000] log(x)
- plot[2:0.000000] log(x)
- plot[4:-0.000015] log(x)
- plot[5:0.000000] log(x)
- plot[15:0.000000] log(x)
- plot[23:-0.000015] log(x)
- plot[26:-0.000014] log(x)
- plot[31:-1.942505] log(x)
- plot[45:0.000000] log(x)
- plot[54:0.000000] log(x)
- plot[55:-1.942502] log(x)
- plot[67:0.000000] log(x)
+set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[1:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[2:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[4:-0.000015] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[5:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[15:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[23:-0.000015] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[26:-0.000013] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[31:-1.960377] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[45:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[54:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[55:-1.960373] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[67:0.000000] log(x)
+ pause mouseset title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[1:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[2:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[4:-0.000015] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[5:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[15:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[23:-0.000015] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[26:-0.000013] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[31:-1.084441] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[45:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[54:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[55:-1.084437] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[67:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[1:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[2:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[4:-0.000014] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[5:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[15:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[23:-0.000014] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[26:-0.000013] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[31:-1.932086] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[45:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[54:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[55:-1.932082] log(x)
+ set title "Grafica de Eficiencia Arbol"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[67:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol AVL"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[1:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol AVL"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[2:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol AVL"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[4:-0.000015] log(x)
+ set title "Grafica de Eficiencia Arbol AVL"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[5:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol AVL"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[15:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol AVL"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[23:-0.000015] log(x)
+ set title "Grafica de Eficiencia Arbol AVL"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[26:-0.000014] log(x)
+ set title "Grafica de Eficiencia Arbol AVL"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[31:-1.058362] log(x)
+ set title "Grafica de Eficiencia Arbol AVL"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[45:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol AVL"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[54:0.000000] log(x)
+ set title "Grafica de Eficiencia Arbol AVL"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[55:-1.058358] log(x)
+ set title "Grafica de Eficiencia Arbol AVL"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[67:0.000000] log(x)
  

@@ -1,0 +1,5 @@
+set title "Grafica de Eficiencia Burbuja"
+set ylabel "Tiempo en ordenar"
+set xlabel "Cantidad elementos Ordenados"
+plot[13:0.000000] x*exp(2)
+ pause mouse
