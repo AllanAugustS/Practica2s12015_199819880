@@ -1,12 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 #define SALIR 0
 #define CARGAR 1
 #define RECORRIDO 2
+#define BURBUJA 3
+#define QUICKSORT 4
+#define GRAFICABURBUJA 5
+#define GRAFICAARBOL 6
+#define GRAFICAQUICK 7
 #define TRUE 1
 #define FALSE 0
-
+#define TAMANO 80
+int c;
+int lista[100];
 enum {IZQUIERDO, DERECHO};
 
 /* Estructuras y tipos */
@@ -56,11 +64,90 @@ void auxAltura(Arbol a, int, int*);
 
 void Mostrar(int *d);
 
+/* Estructura de la lista enlazada: */
 
+typedef struct nodo{
+    int dato;
+    struct nodo *sig;
+}Nodo;
+
+Nodo *cabeza;
+
+Nodo *insertar(Nodo *cabeza, int dato){
+    Nodo *nuevo = (Nodo *)malloc(sizeof( Nodo));
+    nuevo->dato = dato;
+    if(cabeza==NULL){
+        cabeza = nuevo;
+    }else{
+        Nodo *aux = cabeza;
+        while(aux->sig!=NULL){
+            aux = aux->sig;
+        }
+        aux->sig = nuevo;
+    }
+    return cabeza;
+}
+
+Nodo *ordenarburbuja(Nodo *cabeza){
+Nodo *actual, *siguiente;
+int n;
+actual = cabeza;
+while(actual->sig != NULL){
+
+ siguiente = actual->sig;
+ while(siguiente!=NULL){
+ if(actual->dato > siguiente->dato){
+ n = siguiente->dato;
+ siguiente->dato = actual->dato;
+ actual->dato = n;
+ }
+siguiente = siguiente->sig;
+ }
+ actual= actual->sig;
+ siguiente = actual->sig;
+ }
+
+return cabeza;
+ }
+/* Estructura de la lista enlazada: */
+
+void intercambio(int *a, int *b){
+
+int temp = *a;
+*a = *b;
+*b = temp;
+
+}
+
+void ordenarquicksort(int * izq, int *der){
+if(der<izq)
+return;
+int pivote = *izq;
+int *ult = der;
+int Pri = izq;
+while(izq<der){
+    while(*izq <= pivote && izq <der+1)
+    izq++;
+    while(*der > pivote && der > izq-1)
+    der--;
+    if(izq < der)
+    intercambio(izq,der);
+
+}
+intercambio(Pri,der);
+ordenarquicksort(Pri,der-1);
+ordenarquicksort(der+1,ult);
+
+}
 
 int main()
 {
+
+    //int lista[Tamanio];
+    clock_t inicio, fin;
     Arbol ArbolInt=NULL;
+    Nodo *cabeza = NULL;
+
     int seleccion = 0;
     do{
         system("clear");
@@ -69,36 +156,134 @@ int main()
         printf("0. Salir\n");
         printf("1. cargar\n");
         printf("2. recorrido in orden\n");
+        printf("3. ordenar lista burbuja\n");
+        printf("4. ordenar lista quicksort\n");
+        printf("5. Graficar eficiencia burbuja\n");
+        printf("6. Graficar eficiencia Arbol\n");
+        printf("7. Graficar eficiencia quicksort\n");
         printf("------------ FIN --------------\n");
-        if(seleccion==RECORRIDO){
+        if(seleccion==GRAFICAQUICK){
+        printf("Esta es mi grafica ");
+         system("gnuplot grafica3.txt");
+        }
+        else if(seleccion==GRAFICAARBOL){
+        FILE * archivito2;
+        archivito2 = fopen("grafica2.txt","a");
+        if (archivito2==NULL)
+        printf("no se logro crear el archivo");
+
+
+   fprintf(archivito2,"pause mouse");
+   fclose(archivito2);
+system("gnuplot grafica2.txt");
+
+
+        }
+
+        else if(seleccion==GRAFICABURBUJA){
+        printf("Esta es mi grafica ");
+         system("gnuplot grafica1.txt");
+        }
+
+        else if(seleccion==QUICKSORT){
+        float tim;
+        FILE * archivito3;
+        archivito3 = fopen("grafica3.txt","w");
+        if (archivito3==NULL)
+        printf("no se logro crear el archivo");
+
+
+        printf("los datos de la lista ordenada quicksort son: \n");
+        inicio = clock();
+        int size = c;
+        ordenarquicksort(&lista[0],&lista[size-1]);
+        int i;
+        for(i=0; i<size;i++)
+        printf("%d ", lista[i]);
+        for(i=0; i<size;i++)
+        fprintf(archivito3,"plot[%d:%f] log(x)\n ", lista[i],tim);
+
+         fprintf(archivito3,"pause mouse");
+         tim =(float)(fin-inicio)/(float)CLOCKS_PER_SEC;
+        fin = clock();
+        printf("\nSe tardo en ordenar la lista en: %f Segundos\n",(float)(fin-inicio)/(float)CLOCKS_PER_SEC);
+        fclose(archivito3);
+
+        }
+        else if(seleccion==BURBUJA){
+        float tim;
+        FILE * archivito;
+        archivito = fopen("grafica1.txt","w");
+        if (archivito==NULL)
+        printf("no se logro crear el archivo");
+
+
+        printf("los datos de la lista ordenada burbuja son: ");
+        inicio = clock();
+        ordenarburbuja(cabeza);
+
+        while(cabeza!=NULL){
+        fprintf(archivito,"plot[%d:%f] x*exp(2)\n ", cabeza->dato,tim);
+        printf("%d ", cabeza->dato);
+        cabeza=cabeza->sig;
+
+         }
+      fprintf(archivito,"pause mouse");
+        fin = clock();
+        tim =(float)(fin-inicio)/(float)CLOCKS_PER_SEC;
+        printf("\nSe tardo en ordenar la lista en: %f Segundos\n",(float)(fin-inicio)/(float)CLOCKS_PER_SEC);
+fclose(archivito);
+
+        }
+        else if(seleccion==RECORRIDO){
+
          printf("InOrden: \n");
+         inicio = clock();
          InOrden(ArbolInt, Mostrar);
+         //printf("N nodos: %d\n", NumeroNodos(ArbolInt, &nnodos));
+
          printf("\n");
+         fin = clock();
+         printf("Se tardo en recorrer el arbol en: %f Segundos\n",(float)(fin-inicio)/(float)CLOCKS_PER_SEC);
+
 
          }
         else if(seleccion==CARGAR){
-
+        printf("Ingrese la ruta del archivo: \n");
+            inicio = clock();
             FILE *archivo; /*area de buffer*/
+            char nombre[TAMANO];
+            scanf("%s", nombre);
             int numeros;
-            archivo= fopen("prueba.txt","r"); /* Abrir el archivo */
+            int i=0;
+            archivo= fopen(nombre,"r");
 
-            if(archivo==NULL)
+           if(archivo==NULL)
 
-            printf("Error al abrir archivo o no encontro el archivo \n");
+           printf("Error al abrir archivo o no encontro el archivo \n");
 
             else{
-             /*leer un carácter a la vez hasta alcanzar EOF */
-             while (feof(archivo)== 0){
-             fscanf(archivo,"%d", &numeros);
 
-             Insertar(&ArbolInt, numeros);
+             printf("este es el contenido de mi archivo: \n ");
+             while(feof(archivo) == 0){
+             fscanf(archivo, "%d",&numeros);
 
-             printf("%d \n", numeros);
+              lista[c]= numeros;
+              c=c+1;
+              Insertar(&ArbolInt, numeros);
+                cabeza = insertar(cabeza, numeros);
 
-             }
+             printf("%d\n",numeros);
+
+
+
+   }
 
              fclose(archivo); /*cerrar archivo*/
-             printf("este es el contenido de mi archivo: \n ");
+
+             fin = clock();
+            printf("Se tardo en leer e insertar al arbol: %f Segundos\n",(float)(fin-inicio)/(float)CLOCKS_PER_SEC);
+
 
 
               }
@@ -408,9 +593,12 @@ void Borrar(Arbol *a, int dat)
 */
 void InOrden(Arbol a, void (*func)(int*))
 {
+
    if(a->izquierdo) InOrden(a->izquierdo, func);
    func(&(a->dato));
    if(a->derecho) InOrden(a->derecho, func);
+
+
 }
 
 /* Recorrido de árbol en preorden, aplicamos la función func, que tiene
@@ -523,5 +711,21 @@ int EsHoja(pNodo r)
 /* Función de prueba para recorridos del árbol */
 void Mostrar(int *d)
 {
-   printf("%d, ", *d);
+clock_t inicio, fin;
+float tim;
+FILE * archivito2;
+        archivito2 = fopen("grafica2.txt","a");
+        if (archivito2==NULL)
+        printf("no se logro crear el archivo");
+inicio = clock();
+
+   fprintf(archivito2,"plot[%d:%f] log(x)\n ",*d, tim);
+
+
+
+        fin = clock();
+        tim =(float)(fin-inicio)/(float)CLOCKS_PER_SEC;
+
+        fclose(archivito2);
+        printf("%d, ", *d);
 }

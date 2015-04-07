@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1427481580 source:/home/allan/Escritorio/edd199819880/main.c
+1428384763 source:/home/allan/Escritorio/edd199819880/main.c
 	<stdio.h>
 	<stdlib.h>
+	<time.h>
 
